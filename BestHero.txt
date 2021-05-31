@@ -1,0 +1,49 @@
+//To Find who is Best Hero//
+import java.util.*;
+class  BestHero
+{
+	public static void main(String[] args)throws Exception 
+	{
+		Scanner sc=new Scanner(System.in);
+
+		String Hero1name,Hero2name;
+		int Hero1hit,Hero2hit,Hero1avg,Hero2avg,Hero1flop,Hero2flop,Hero1total,Hero2total;
+
+        System.out.println("Enter Hero1 name and no of movies");
+		Hero1name=sc.nextLine();
+		Hero1hit=sc.nextInt();
+		Hero1avg=sc.nextInt();
+		Hero1flop=sc.nextInt();
+
+		System.out.println("Enter Hero2 name and no of movies");
+		Hero2name=sc.nextLine();
+		sc.nextLine();
+		Hero2hit=sc.nextInt();
+		Hero2avg=sc.nextInt();
+		Hero2flop=sc.nextInt();
+
+		Hero1total=Hero1hit*10+Hero1avg*5+Hero1flop*-5;
+		Hero2total=Hero2hit*10+Hero2avg*5+Hero2flop*-5;
+
+		if(Hero1total>Hero2total)
+			System.out.println(Hero1name+"is the Best Hero with "+Hero1total+"points" );
+		else if(Hero2total>Hero1total)
+			System.out.println(Hero2name+"is the Best Hero with "+Hero2total+"points" );
+		else
+			System.out.println(Hero1name+" and " +Hero2name+ " are having equal points" );
+	}
+}
+
+#Output
+Enter Hero1 name and no of movies
+chiru
+90
+35
+25
+Enter Hero2 name and no of movies
+Pawankalyan
+78
+25
+10
+chiruis the Best Hero with 950points
+Press any key to continue . . .
